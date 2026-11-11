@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>跳转 · 科技全球</title>
+    <script>
+      (function () {
+        var path = "/tech-global" + location.hash;
+        if (location.port === "8090" || location.port === "8080") {
+          var base = location.protocol + "//" + location.hostname + ":5173";
+          location.replace(base + path);
+          return;
+        }
+        location.replace(path);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>正在打开科技全球…开发预览请用 <a href="http://127.0.0.1:5173/tech-global">http://127.0.0.1:5173/tech-global</a></p>
+  </body>
+</html>

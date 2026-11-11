@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="绿色循环中转袋">
+  <g fill="none" stroke="#0670E8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 12V9a5 5 0 0 1 10 0v3"/><path class="sustain-icon-fill" fill="#CDE2FA" d="M8 12h16l1 13a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2Z"/><path d="M19.5 18a4 4 0 1 0 0 4m0-7v3.5H16"/>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>跳转</title>
+    <script>
+      (function () {
+        var params = new URLSearchParams(location.search);
+        var nav = params.get("nav") || "tech";
+        var path = nav === "tech" ? "/tech-global" : "/placeholder?nav=" + encodeURIComponent(nav);
+        location.replace(path + location.hash);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

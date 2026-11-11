@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="优化运输干线">
+  <g fill="none" stroke="#0670E8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 21V9h13v12H6Z" class="sustain-icon-fill" fill="#CDE2FA"/><path d="M19 13h5l4 4v4h-9"/><circle cx="10" cy="22" r="2.5" class="sustain-icon-spot" fill="#ffffff"/><circle cx="24" cy="22" r="2.5" class="sustain-icon-spot" fill="#ffffff"/>
+  </g>
+</svg>

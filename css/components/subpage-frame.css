@@ -1,0 +1,89 @@
+/* 次级页面：无顶栏 Banner，标题区（左返回 + 中标题）+ 内容 */
+
+.subpage-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--mg-Grayblue-10-lightborder);
+}
+
+.subpage-page .site-footer {
+  margin-top: auto;
+}
+
+/* 仅为固定顶栏占位，渐变只留在 site-header__bar 一层，避免与 bleed 叠两段 */
+.subpage-nav-bleed {
+  width: 100%;
+  height: var(--header-height-hero);
+  pointer-events: none;
+}
+
+.subpage-page .site-header--hero:not(.is-scrolled):not(.has-mega-open) .site-header__bar {
+  background: var(--gradient-hero-overlay);
+  box-shadow: none;
+}
+
+.subpage {
+  position: relative;
+  z-index: 4;
+  flex: 1;
+  width: calc(100% - 2 * var(--layout-inline-margin));
+  max-width: var(--layout-content-max);
+  margin: 0 auto;
+  padding: 28px 0 72px;
+}
+
+.subpage__wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.subpage__wrap--md {
+  max-width: 720px;
+}
+
+.subpage__wrap--lg {
+  max-width: 880px;
+}
+
+.subpage__head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-bottom: 24px;
+}
+
+.subpage__back {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+
+.subpage__title {
+  margin: 0;
+  padding: 0 120px;
+  font-size: clamp(20px, 2.2vw, 24px);
+  line-height: 1.35;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-text-primary, #101828);
+}
+
+.subpage__body {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .subpage {
+    padding-top: 20px;
+  }
+
+  .subpage__title {
+    padding: 0 96px 0 88px;
+    font-size: 18px;
+  }
+}

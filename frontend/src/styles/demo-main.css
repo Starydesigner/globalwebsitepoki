@@ -1,0 +1,16 @@
+.demo-main {
+  padding: 48px 0;
+  min-height: calc(100vh - var(--header-height-hero) - 360px);
+  background: var(--mg-bg-secondary);
+}
+
+.demo-card {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px;
+  background: var(--mg-bg-white);
+  border-radius: var(--mg-radius-lg);
+  box-shadow: var(--mg-shadow-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}

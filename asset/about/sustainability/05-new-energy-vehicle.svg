@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="使用新能源汽车">
+  <g fill="none" stroke="#0670E8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m7 15 2.5-6h13l2.5 6M8 23v3m16-3v3"/><rect x="5" y="15" width="22" height="8" rx="2.5" class="sustain-icon-fill" fill="#CDE2FA"/><path d="m17 16.5-2.5 3h3l-2 2" stroke-width="1.5"/>
+  </g>
+</svg>

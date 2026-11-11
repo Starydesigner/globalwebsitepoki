@@ -1,0 +1,275 @@
+/* 物流产品/本土服务：上图下文区域卡（product-service-card ≡ product-overseas-card） */
+
+.product-overseas-cards,
+.product-service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.product-overseas-cards .product-overseas-card,
+.product-overseas-cards .product-service-card,
+.product-service-cards .product-overseas-card,
+.product-service-cards .product-service-card {
+  flex: 0 0 calc((100% - 48px) / 3);
+  max-width: calc((100% - 48px) / 3);
+  min-width: 0;
+}
+
+.product-overseas-cards--row-1 .product-overseas-card,
+.product-overseas-cards--row-1 .product-service-card {
+  flex: 0 0 calc((100% - 48px) / 3);
+  max-width: calc((100% - 48px) / 3);
+}
+
+/* inner-local 等：香港三服务卡一行三列 */
+.product-service-cards--three {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.product-service-cards--three .product-service-card,
+.product-service-cards--three .product-overseas-card {
+  flex: unset;
+  max-width: none;
+  width: 100%;
+}
+
+.product-service-cards--one {
+  display: flex;
+  justify-content: center;
+}
+
+.product-service-cards--one .product-service-card,
+.product-service-cards--one .product-overseas-card {
+  flex: 0 0 calc((100% - 48px) / 3);
+  max-width: calc((100% - 48px) / 3);
+}
+
+@media (max-width: 1024px) {
+  .product-service-cards--three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .product-service-cards--three {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .product-service-cards--one .product-service-card,
+  .product-service-cards--one .product-overseas-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .product-overseas-cards .product-overseas-card,
+  .product-overseas-cards .product-service-card,
+  .product-service-cards .product-overseas-card,
+  .product-service-cards .product-service-card {
+    flex: 0 0 calc((100% - 24px) / 2);
+    max-width: calc((100% - 24px) / 2);
+  }
+}
+
+@media (max-width: 640px) {
+  .product-overseas-cards .product-overseas-card,
+  .product-overseas-cards .product-service-card,
+  .product-service-cards .product-overseas-card,
+  .product-service-cards .product-service-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.product-overseas-card,
+.product-service-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background: var(--mg-bg-white);
+  border: 1px solid var(--mg-Grayblue-30);
+  border-radius: var(--mg-radius-lg);
+  box-shadow: 0 8px 32px 0 rgba(104, 161, 228, 0.08);
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.product-overseas-card.is-visible,
+.product-service-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-overseas-card__media,
+.product-service-card__media {
+  margin: 0;
+  border-radius: var(--mg-radius-lg) var(--mg-radius-lg) 0 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--mg-Grayblue-20-primaryborder);
+  flex-shrink: 0;
+}
+
+.product-overseas-card__media img,
+.product-service-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: center;
+}
+
+.product-overseas-card__body,
+.product-service-card__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 28px 28px;
+}
+
+.product-overseas-card__body h3,
+.product-service-card__body h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+}
+
+.product-service-card__body h3:has(.product-service-card__scene-icon) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-service-card__scene-icon {
+  flex-shrink: 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.product-overseas-card__body > p,
+.product-service-card__body > p {
+  flex: 1 1 auto;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.product-service-card__body .product-service-card__desc {
+  flex: none;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.product-service-card__timing {
+  flex: none;
+  margin: 8px 0 0;
+}
+
+.product-service-card__timing-label {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  color: var(--mg-blue-60);
+}
+
+.product-service-card__timing-value {
+  margin: 2px 0 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--color-text-secondary);
+}
+
+.product-overseas-card__body .product-rich-card__link,
+.product-service-card__body .product-rich-card__link {
+  margin-top: 4px;
+  align-self: flex-start;
+}
+
+.product-gtm-block + .product-gtm-block {
+  margin-top: 48px;
+}
+
+.product-gtm-block__title {
+  margin: 0 0 24px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: var(--color-text-primary);
+}
+
+.product-overseas-card::after,
+.product-service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  border-radius: inherit;
+  padding: 1.5px;
+  pointer-events: none;
+  opacity: 0;
+  background: conic-gradient(
+    from var(--product-border-glow, 0deg),
+    rgba(104, 161, 228, 0) 0deg,
+    rgba(104, 161, 228, 0) 288deg,
+    rgba(6, 112, 232, 0.45) 312deg,
+    rgba(72, 186, 255, 0.95) 332deg,
+    rgba(168, 210, 255, 0.75) 352deg,
+    rgba(104, 161, 228, 0) 360deg
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  transition: opacity 0.35s ease;
+}
+
+@media (hover: hover) {
+  .product-overseas-card.is-visible:hover,
+  .product-service-card.is-visible:hover {
+    border-color: rgba(104, 161, 228, 0.52);
+    transform: translateY(-4px);
+    box-shadow:
+      0 16px 40px 0 rgba(104, 161, 228, 0.14),
+      0 0 0 1px rgba(104, 161, 228, 0.22),
+      0 0 24px -6px rgba(6, 112, 232, 0.32);
+  }
+
+  .product-overseas-card.is-visible:hover::after,
+  .product-service-card.is-visible:hover::after {
+    opacity: 1;
+    animation: product-border-glow-spin 2.6s linear infinite;
+  }
+}
+
+@keyframes product-border-glow-spin {
+  to {
+    --product-border-glow: 360deg;
+  }
+}
+
+.cb-wrap .product-service-cards {
+  margin-bottom: 32px;
+}
+

@@ -1,0 +1,252 @@
+/* 科技全球 — 中通科技简介 + 全面的系统保障（MasterGo 中通科技 44:04412） */
+
+.tech-global {
+  color: var(--color-text-primary);
+  background: #f3f6f9;
+}
+
+.tech-global__hub {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(72px, 6.875vw, 132px) 0 clamp(64px, 5vw, 100px);
+}
+
+.tech-global__hub::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-color: #f3f6f9;
+  background-image: url("../../asset/images/tech-global/tech_global_intro_bg.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+  opacity: 0.92;
+  filter: blur(2px);
+  transform: scale(1.01);
+  pointer-events: none;
+}
+
+.tech-global__hub-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.tech-global__hub-block {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  width: 100%;
+}
+
+.tech-global__hub-block .product-section__head {
+  margin-bottom: 0;
+}
+
+.tech-global__intro-card {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid rgb(255 255 255 / 0.4);
+  background: rgb(255 255 255 / 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.tech-global__intro-card-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 25px;
+  color: #01162e;
+  text-align: center;
+}
+
+/* 系统保障卡片：浅色毛玻璃 + 原彗星描边 / 光标光晕交互 */
+.tech-global__culture-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tech-global__culture-item {
+  --culture-orbit-band: 2px;
+  --culture-radius: 16px;
+  --culture-card-height: 244px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: var(--culture-card-height);
+  min-height: var(--culture-card-height);
+  padding: var(--culture-orbit-band);
+  border: none;
+  border-radius: var(--culture-radius);
+  background: transparent;
+  overflow: hidden;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.tech-global__culture-item-band {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  box-sizing: border-box;
+  padding: var(--culture-orbit-band);
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+  mask-clip: border-box, content-box;
+  mask-composite: exclude;
+  -webkit-mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+  -webkit-mask-clip: border-box, content-box;
+  -webkit-mask-composite: xor;
+}
+
+.tech-global__culture-item-comet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  pointer-events: none;
+}
+
+.tech-global__culture-item-comet-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.tech-global__culture-item-body {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 32px 28px;
+  border: 1px solid rgb(255 255 255 / 0.4);
+  border-radius: calc(var(--culture-radius) - var(--culture-orbit-band));
+  background: rgb(255 255 255 / 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.tech-global__culture-icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  object-fit: contain;
+}
+
+.tech-global__culture-name {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #01162e;
+}
+
+.tech-global__culture-desc {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4d5c6d;
+}
+
+.tech-global__culture-item-glow {
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 280px;
+  opacity: 0;
+  background: radial-gradient(
+    circle at center,
+    rgb(106 176 255 / 0.22) 0%,
+    rgb(134 192 255 / 0.14) 38%,
+    rgb(168 210 255 / 0.06) 58%,
+    transparent 76%
+  );
+  transition: opacity 0.25s ease;
+}
+
+@media (hover: hover) {
+  .tech-global__culture-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgb(6 112 232 / 0.14);
+  }
+
+  .tech-global__culture-item:hover .tech-global__culture-item-band {
+    opacity: 1;
+  }
+
+  .tech-global__culture-item:hover .tech-global__culture-item-body {
+    border-color: rgb(255 255 255 / 0.72);
+    background: rgb(255 255 255 / 0.88);
+  }
+}
+
+@media (max-width: 1200px) {
+  .tech-global__culture-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .tech-global__hub {
+    padding: 48px 0 56px;
+  }
+
+  .tech-global__hub-inner {
+    gap: 48px;
+  }
+
+  .tech-global__hub-block {
+    gap: 32px;
+  }
+
+  .tech-global__intro-card {
+    padding: 24px 20px;
+  }
+
+  .tech-global__culture-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .tech-global__culture-item {
+    height: auto;
+    min-height: 0;
+  }
+
+  .tech-global__culture-item-body {
+    height: auto;
+    min-height: 0;
+    padding: 28px 20px;
+  }
+
+  .tech-global__intro-card-text {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+}

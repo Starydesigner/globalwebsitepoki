@@ -1,0 +1,1095 @@
+{
+  "source": "https://websiteapi.ztoglobal.com/basic/queryRegion",
+  "scrapedAt": "2026-10-28",
+  "origin": {
+    "hot": [
+      {
+        "areaName": "广东省",
+        "areaCode": "440000"
+      },
+      {
+        "areaName": "江苏省",
+        "areaCode": "320000"
+      },
+      {
+        "areaName": "浙江省",
+        "areaCode": "330000"
+      },
+      {
+        "areaName": "上海市",
+        "areaCode": "310000"
+      },
+      {
+        "areaName": "北京市",
+        "areaCode": "110000"
+      },
+      {
+        "areaName": "四川省",
+        "areaCode": "510000"
+      },
+      {
+        "areaName": "山东省",
+        "areaCode": "370000"
+      },
+      {
+        "areaName": "福建省",
+        "areaCode": "350000"
+      }
+    ],
+    "all": [
+      {
+        "areaCode": "340000",
+        "areaName": "安徽省"
+      },
+      {
+        "areaCode": "110000",
+        "areaName": "北京市"
+      },
+      {
+        "areaCode": "350000",
+        "areaName": "福建省"
+      },
+      {
+        "areaCode": "440000",
+        "areaName": "广东省"
+      },
+      {
+        "areaCode": "620000",
+        "areaName": "甘肃省"
+      },
+      {
+        "areaCode": "450000",
+        "areaName": "广西壮族自治区"
+      },
+      {
+        "areaCode": "520000",
+        "areaName": "贵州省"
+      },
+      {
+        "areaCode": "130000",
+        "areaName": "河北省"
+      },
+      {
+        "areaCode": "420000",
+        "areaName": "湖北省"
+      },
+      {
+        "areaCode": "230000",
+        "areaName": "黑龙江省"
+      },
+      {
+        "areaCode": "410000",
+        "areaName": "河南省"
+      },
+      {
+        "areaCode": "430000",
+        "areaName": "湖南省"
+      },
+      {
+        "areaCode": "460000",
+        "areaName": "海南省"
+      },
+      {
+        "areaCode": "220000",
+        "areaName": "吉林省"
+      },
+      {
+        "areaCode": "320000",
+        "areaName": "江苏省"
+      },
+      {
+        "areaCode": "360000",
+        "areaName": "江西省"
+      },
+      {
+        "areaCode": "210000",
+        "areaName": "辽宁省"
+      },
+      {
+        "areaCode": "150000",
+        "areaName": "内蒙古自治区"
+      },
+      {
+        "areaCode": "640000",
+        "areaName": "宁夏回族自治区"
+      },
+      {
+        "areaCode": "630000",
+        "areaName": "青海省"
+      },
+      {
+        "areaCode": "510000",
+        "areaName": "四川省"
+      },
+      {
+        "areaCode": "370000",
+        "areaName": "山东省"
+      },
+      {
+        "areaCode": "310000",
+        "areaName": "上海市"
+      },
+      {
+        "areaCode": "140000",
+        "areaName": "山西省"
+      },
+      {
+        "areaCode": "610000",
+        "areaName": "陕西省"
+      },
+      {
+        "areaCode": "120000",
+        "areaName": "天津市"
+      },
+      {
+        "areaCode": "650000",
+        "areaName": "新疆维吾尔自治区"
+      },
+      {
+        "areaCode": "540000",
+        "areaName": "西藏自治区"
+      },
+      {
+        "areaCode": "530000",
+        "areaName": "云南省"
+      },
+      {
+        "areaCode": "330000",
+        "areaName": "浙江省"
+      },
+      {
+        "areaCode": "500000",
+        "areaName": "重庆市"
+      }
+    ]
+  },
+  "destination": {
+    "gat": [
+      {
+        "areaCode": "TW",
+        "areaName": "中国台湾"
+      },
+      {
+        "areaCode": "HK",
+        "areaName": "中国香港"
+      },
+      {
+        "areaCode": "MO",
+        "areaName": "中国澳门"
+      }
+    ],
+    "hot": [
+      {
+        "areaCode": "KH",
+        "areaName": "柬埔寨"
+      },
+      {
+        "areaCode": "VN",
+        "areaName": "越南"
+      },
+      {
+        "areaCode": "TH",
+        "areaName": "泰国"
+      },
+      {
+        "areaCode": "SG",
+        "areaName": "新加坡"
+      },
+      {
+        "areaCode": "JP",
+        "areaName": "日本"
+      },
+      {
+        "areaCode": "KR",
+        "areaName": "韩国"
+      },
+      {
+        "areaCode": "AU",
+        "areaName": "澳大利亚"
+      },
+      {
+        "areaCode": "DE",
+        "areaName": "德国"
+      },
+      {
+        "areaCode": "MY",
+        "areaName": "马来西亚"
+      },
+      {
+        "areaCode": "GB",
+        "areaName": "英国"
+      },
+      {
+        "areaCode": "US",
+        "areaName": "美国"
+      }
+    ],
+    "all": [
+      {
+        "areaCode": "AD",
+        "areaName": "安道尔共和国",
+        "region": ""
+      },
+      {
+        "areaCode": "AE",
+        "areaName": "阿联酋",
+        "region": ""
+      },
+      {
+        "areaCode": "AF",
+        "areaName": "阿富汗",
+        "region": ""
+      },
+      {
+        "areaCode": "AG",
+        "areaName": "安提瓜和巴布达",
+        "region": ""
+      },
+      {
+        "areaCode": "AI",
+        "areaName": "安圭拉",
+        "region": ""
+      },
+      {
+        "areaCode": "AL",
+        "areaName": "阿尔巴尼亚",
+        "region": ""
+      },
+      {
+        "areaCode": "AM",
+        "areaName": "亚美尼亚",
+        "region": ""
+      },
+      {
+        "areaCode": "AO",
+        "areaName": "安哥拉",
+        "region": ""
+      },
+      {
+        "areaCode": "AR",
+        "areaName": "阿根廷",
+        "region": ""
+      },
+      {
+        "areaCode": "AT",
+        "areaName": "奥地利",
+        "region": ""
+      },
+      {
+        "areaCode": "AU",
+        "areaName": "澳大利亚",
+        "region": ""
+      },
+      {
+        "areaCode": "AW",
+        "areaName": "阿鲁巴岛",
+        "region": ""
+      },
+      {
+        "areaCode": "AZ",
+        "areaName": "阿塞拜疆",
+        "region": ""
+      },
+      {
+        "areaCode": "BA",
+        "areaName": "波斯尼亚和黑塞哥维那",
+        "region": ""
+      },
+      {
+        "areaCode": "BB",
+        "areaName": "巴巴多斯",
+        "region": ""
+      },
+      {
+        "areaCode": "BD",
+        "areaName": "孟加拉",
+        "region": ""
+      },
+      {
+        "areaCode": "BE",
+        "areaName": "比利时",
+        "region": ""
+      },
+      {
+        "areaCode": "BF",
+        "areaName": "布基纳法索",
+        "region": ""
+      },
+      {
+        "areaCode": "BG",
+        "areaName": "保加利亚",
+        "region": ""
+      },
+      {
+        "areaCode": "BH",
+        "areaName": "巴林",
+        "region": ""
+      },
+      {
+        "areaCode": "BI",
+        "areaName": "布隆迪",
+        "region": ""
+      },
+      {
+        "areaCode": "BJ",
+        "areaName": "贝宁",
+        "region": ""
+      },
+      {
+        "areaCode": "BN",
+        "areaName": "文莱",
+        "region": ""
+      },
+      {
+        "areaCode": "BO",
+        "areaName": "玻利维亚",
+        "region": ""
+      },
+      {
+        "areaCode": "BR",
+        "areaName": "巴西",
+        "region": ""
+      },
+      {
+        "areaCode": "BS",
+        "areaName": "巴哈马",
+        "region": ""
+      },
+      {
+        "areaCode": "BT",
+        "areaName": "不丹",
+        "region": ""
+      },
+      {
+        "areaCode": "BW",
+        "areaName": "博茨瓦纳",
+        "region": ""
+      },
+      {
+        "areaCode": "BY",
+        "areaName": "白俄罗斯",
+        "region": ""
+      },
+      {
+        "areaCode": "BZ",
+        "areaName": "伯利兹",
+        "region": ""
+      },
+      {
+        "areaCode": "CA",
+        "areaName": "加拿大",
+        "region": ""
+      },
+      {
+        "areaCode": "CD",
+        "areaName": "刚果民主共和国（金）",
+        "region": ""
+      },
+      {
+        "areaCode": "CG",
+        "areaName": "刚果（布）",
+        "region": ""
+      },
+      {
+        "areaCode": "CH",
+        "areaName": "瑞士",
+        "region": ""
+      },
+      {
+        "areaCode": "CI",
+        "areaName": "科特迪瓦",
+        "region": ""
+      },
+      {
+        "areaCode": "CK",
+        "areaName": "库克群岛",
+        "region": ""
+      },
+      {
+        "areaCode": "CL",
+        "areaName": "智利",
+        "region": ""
+      },
+      {
+        "areaCode": "CM",
+        "areaName": "喀麦隆",
+        "region": ""
+      },
+      {
+        "areaCode": "CO",
+        "areaName": "哥伦比亚",
+        "region": ""
+      },
+      {
+        "areaCode": "CR",
+        "areaName": "哥斯达黎加",
+        "region": ""
+      },
+      {
+        "areaCode": "CV",
+        "areaName": "佛得角",
+        "region": ""
+      },
+      {
+        "areaCode": "CY",
+        "areaName": "塞浦路斯",
+        "region": ""
+      },
+      {
+        "areaCode": "CZ",
+        "areaName": "捷克",
+        "region": ""
+      },
+      {
+        "areaCode": "DE",
+        "areaName": "德国",
+        "region": ""
+      },
+      {
+        "areaCode": "DJ",
+        "areaName": "吉布提",
+        "region": ""
+      },
+      {
+        "areaCode": "DK",
+        "areaName": "丹麦",
+        "region": ""
+      },
+      {
+        "areaCode": "DO",
+        "areaName": "多米尼加共和国",
+        "region": ""
+      },
+      {
+        "areaCode": "DZ",
+        "areaName": "阿尔及利亚",
+        "region": ""
+      },
+      {
+        "areaCode": "EC",
+        "areaName": "厄瓜多尔",
+        "region": ""
+      },
+      {
+        "areaCode": "EE",
+        "areaName": "爱沙尼亚",
+        "region": ""
+      },
+      {
+        "areaCode": "EG",
+        "areaName": "埃及",
+        "region": ""
+      },
+      {
+        "areaCode": "ER",
+        "areaName": "厄立特里亚",
+        "region": ""
+      },
+      {
+        "areaCode": "ES",
+        "areaName": "西班牙",
+        "region": ""
+      },
+      {
+        "areaCode": "ET",
+        "areaName": "埃塞俄比亚",
+        "region": ""
+      },
+      {
+        "areaCode": "FI",
+        "areaName": "芬兰",
+        "region": ""
+      },
+      {
+        "areaCode": "FJ",
+        "areaName": "斐济",
+        "region": ""
+      },
+      {
+        "areaCode": "FM",
+        "areaName": "密克罗尼西亚联邦国",
+        "region": ""
+      },
+      {
+        "areaCode": "FR",
+        "areaName": "法国",
+        "region": ""
+      },
+      {
+        "areaCode": "GA",
+        "areaName": "加蓬",
+        "region": ""
+      },
+      {
+        "areaCode": "GB",
+        "areaName": "英国",
+        "region": ""
+      },
+      {
+        "areaCode": "GD",
+        "areaName": "格林纳达",
+        "region": ""
+      },
+      {
+        "areaCode": "GE",
+        "areaName": "格鲁吉亚",
+        "region": ""
+      },
+      {
+        "areaCode": "GH",
+        "areaName": "加纳",
+        "region": ""
+      },
+      {
+        "areaCode": "GI",
+        "areaName": "直布罗陀",
+        "region": ""
+      },
+      {
+        "areaCode": "GM",
+        "areaName": "冈比亚",
+        "region": ""
+      },
+      {
+        "areaCode": "GN",
+        "areaName": "几内亚",
+        "region": ""
+      },
+      {
+        "areaCode": "GR",
+        "areaName": "希腊",
+        "region": ""
+      },
+      {
+        "areaCode": "GT",
+        "areaName": "危地马拉",
+        "region": ""
+      },
+      {
+        "areaCode": "GY",
+        "areaName": "圭亚那",
+        "region": ""
+      },
+      {
+        "areaCode": "HN",
+        "areaName": "洪都拉斯",
+        "region": ""
+      },
+      {
+        "areaCode": "HR",
+        "areaName": "克罗地亚",
+        "region": ""
+      },
+      {
+        "areaCode": "HT",
+        "areaName": "海地",
+        "region": ""
+      },
+      {
+        "areaCode": "HU",
+        "areaName": "匈牙利",
+        "region": ""
+      },
+      {
+        "areaCode": "ID",
+        "areaName": "印度尼西亚",
+        "region": ""
+      },
+      {
+        "areaCode": "IE",
+        "areaName": "爱尔兰",
+        "region": ""
+      },
+      {
+        "areaCode": "IL",
+        "areaName": "以色列",
+        "region": ""
+      },
+      {
+        "areaCode": "IN",
+        "areaName": "印度",
+        "region": ""
+      },
+      {
+        "areaCode": "IQ",
+        "areaName": "伊拉克",
+        "region": ""
+      },
+      {
+        "areaCode": "IS",
+        "areaName": "冰岛",
+        "region": ""
+      },
+      {
+        "areaCode": "IT",
+        "areaName": "意大利",
+        "region": ""
+      },
+      {
+        "areaCode": "JM",
+        "areaName": "牙买加",
+        "region": ""
+      },
+      {
+        "areaCode": "JO",
+        "areaName": "约旦",
+        "region": ""
+      },
+      {
+        "areaCode": "JP",
+        "areaName": "日本",
+        "region": ""
+      },
+      {
+        "areaCode": "KE",
+        "areaName": "肯尼亚",
+        "region": ""
+      },
+      {
+        "areaCode": "KG",
+        "areaName": "吉尔吉斯斯坦",
+        "region": ""
+      },
+      {
+        "areaCode": "KH",
+        "areaName": "柬埔寨",
+        "region": "。"
+      },
+      {
+        "areaCode": "KN",
+        "areaName": "圣基茨和尼维斯",
+        "region": ""
+      },
+      {
+        "areaCode": "KR",
+        "areaName": "韩国",
+        "region": ""
+      },
+      {
+        "areaCode": "KW",
+        "areaName": "科威特",
+        "region": ""
+      },
+      {
+        "areaCode": "KZ",
+        "areaName": "哈萨克斯坦",
+        "region": ""
+      },
+      {
+        "areaCode": "LA",
+        "areaName": "老挝",
+        "region": ""
+      },
+      {
+        "areaCode": "LB",
+        "areaName": "黎巴嫩",
+        "region": ""
+      },
+      {
+        "areaCode": "LC",
+        "areaName": "圣路西亚",
+        "region": ""
+      },
+      {
+        "areaCode": "LK",
+        "areaName": "斯里兰卡",
+        "region": ""
+      },
+      {
+        "areaCode": "LR",
+        "areaName": "利比里亚",
+        "region": ""
+      },
+      {
+        "areaCode": "LS",
+        "areaName": "莱索托",
+        "region": ""
+      },
+      {
+        "areaCode": "LT",
+        "areaName": "立陶宛",
+        "region": ""
+      },
+      {
+        "areaCode": "LU",
+        "areaName": "卢森堡",
+        "region": ""
+      },
+      {
+        "areaCode": "LV",
+        "areaName": "拉脱维亚",
+        "region": ""
+      },
+      {
+        "areaCode": "LY",
+        "areaName": "利比亚",
+        "region": ""
+      },
+      {
+        "areaCode": "MA",
+        "areaName": "摩洛哥",
+        "region": ""
+      },
+      {
+        "areaCode": "MC",
+        "areaName": "摩纳哥",
+        "region": ""
+      },
+      {
+        "areaCode": "MD",
+        "areaName": "摩尔多瓦",
+        "region": ""
+      },
+      {
+        "areaCode": "ME",
+        "areaName": "黑山共和国",
+        "region": ""
+      },
+      {
+        "areaCode": "MG",
+        "areaName": "马达加斯加",
+        "region": ""
+      },
+      {
+        "areaCode": "MH",
+        "areaName": "马绍尔群岛",
+        "region": ""
+      },
+      {
+        "areaCode": "MK",
+        "areaName": "马其顿",
+        "region": ""
+      },
+      {
+        "areaCode": "ML",
+        "areaName": "马里",
+        "region": ""
+      },
+      {
+        "areaCode": "MN",
+        "areaName": "蒙古",
+        "region": ""
+      },
+      {
+        "areaCode": "MQ",
+        "areaName": "马提尼克岛",
+        "region": ""
+      },
+      {
+        "areaCode": "MR",
+        "areaName": "毛里塔尼亚",
+        "region": ""
+      },
+      {
+        "areaCode": "MT",
+        "areaName": "马耳他",
+        "region": ""
+      },
+      {
+        "areaCode": "MU",
+        "areaName": "毛里求斯",
+        "region": ""
+      },
+      {
+        "areaCode": "MV",
+        "areaName": "马尔代夫",
+        "region": ""
+      },
+      {
+        "areaCode": "MW",
+        "areaName": "马拉维",
+        "region": ""
+      },
+      {
+        "areaCode": "MX",
+        "areaName": "墨西哥",
+        "region": ""
+      },
+      {
+        "areaCode": "MY",
+        "areaName": "马来西亚",
+        "region": ""
+      },
+      {
+        "areaCode": "MZ",
+        "areaName": "莫桑比克",
+        "region": ""
+      },
+      {
+        "areaCode": "NA",
+        "areaName": "纳米比亚",
+        "region": ""
+      },
+      {
+        "areaCode": "NE",
+        "areaName": "尼日尔",
+        "region": ""
+      },
+      {
+        "areaCode": "NG",
+        "areaName": "尼日利亚",
+        "region": ""
+      },
+      {
+        "areaCode": "NI",
+        "areaName": "尼加拉瓜",
+        "region": ""
+      },
+      {
+        "areaCode": "NL",
+        "areaName": "荷兰",
+        "region": ""
+      },
+      {
+        "areaCode": "NO",
+        "areaName": "挪威",
+        "region": ""
+      },
+      {
+        "areaCode": "NP",
+        "areaName": "尼泊尔",
+        "region": ""
+      },
+      {
+        "areaCode": "NZ",
+        "areaName": "新西兰",
+        "region": ""
+      },
+      {
+        "areaCode": "OM",
+        "areaName": "阿曼",
+        "region": ""
+      },
+      {
+        "areaCode": "PA",
+        "areaName": "巴拿马",
+        "region": ""
+      },
+      {
+        "areaCode": "PE",
+        "areaName": "秘鲁",
+        "region": ""
+      },
+      {
+        "areaCode": "PG",
+        "areaName": "巴布亚新几内亚",
+        "region": ""
+      },
+      {
+        "areaCode": "PH",
+        "areaName": "菲律宾",
+        "region": ""
+      },
+      {
+        "areaCode": "PK",
+        "areaName": "巴基斯坦",
+        "region": ""
+      },
+      {
+        "areaCode": "PL",
+        "areaName": "波兰",
+        "region": ""
+      },
+      {
+        "areaCode": "PT",
+        "areaName": "葡萄牙",
+        "region": ""
+      },
+      {
+        "areaCode": "PW",
+        "areaName": "帕劳",
+        "region": ""
+      },
+      {
+        "areaCode": "PY",
+        "areaName": "巴拉圭",
+        "region": ""
+      },
+      {
+        "areaCode": "QA",
+        "areaName": "卡塔尔",
+        "region": ""
+      },
+      {
+        "areaCode": "RO",
+        "areaName": "罗马尼亚",
+        "region": ""
+      },
+      {
+        "areaCode": "RS",
+        "areaName": "塞尔维亚",
+        "region": ""
+      },
+      {
+        "areaCode": "RU",
+        "areaName": "俄罗斯",
+        "region": ""
+      },
+      {
+        "areaCode": "RW",
+        "areaName": "卢旺达",
+        "region": ""
+      },
+      {
+        "areaCode": "SC",
+        "areaName": "塞舌尔",
+        "region": ""
+      },
+      {
+        "areaCode": "SE",
+        "areaName": "瑞典",
+        "region": ""
+      },
+      {
+        "areaCode": "SG",
+        "areaName": "新加坡",
+        "region": ""
+      },
+      {
+        "areaCode": "SI",
+        "areaName": "斯洛文尼亚",
+        "region": ""
+      },
+      {
+        "areaCode": "SK",
+        "areaName": "斯洛伐克",
+        "region": ""
+      },
+      {
+        "areaCode": "SN",
+        "areaName": "塞内加尔",
+        "region": ""
+      },
+      {
+        "areaCode": "SR",
+        "areaName": "苏里南",
+        "region": ""
+      },
+      {
+        "areaCode": "SV",
+        "areaName": "萨尔瓦多",
+        "region": ""
+      },
+      {
+        "areaCode": "SY",
+        "areaName": "叙利亚",
+        "region": ""
+      },
+      {
+        "areaCode": "SZ",
+        "areaName": "斯威士兰",
+        "region": ""
+      },
+      {
+        "areaCode": "TD",
+        "areaName": "乍得",
+        "region": ""
+      },
+      {
+        "areaCode": "TG",
+        "areaName": "多哥",
+        "region": ""
+      },
+      {
+        "areaCode": "TH",
+        "areaName": "泰国",
+        "region": ""
+      },
+      {
+        "areaCode": "TL",
+        "areaName": "东帝汶",
+        "region": ""
+      },
+      {
+        "areaCode": "TN",
+        "areaName": "突尼斯",
+        "region": ""
+      },
+      {
+        "areaCode": "TO",
+        "areaName": "汤加",
+        "region": ""
+      },
+      {
+        "areaCode": "TR",
+        "areaName": "土耳其",
+        "region": ""
+      },
+      {
+        "areaCode": "TT",
+        "areaName": "特立尼达和多巴哥",
+        "region": ""
+      },
+      {
+        "areaCode": "TZ",
+        "areaName": "坦桑尼亚",
+        "region": ""
+      },
+      {
+        "areaCode": "UG",
+        "areaName": "乌干达",
+        "region": ""
+      },
+      {
+        "areaCode": "US",
+        "areaName": "美国",
+        "region": ""
+      },
+      {
+        "areaCode": "UY",
+        "areaName": "乌拉圭",
+        "region": ""
+      },
+      {
+        "areaCode": "UZ",
+        "areaName": "乌兹别克斯坦",
+        "region": ""
+      },
+      {
+        "areaCode": "VC",
+        "areaName": "圣文森特岛",
+        "region": ""
+      },
+      {
+        "areaCode": "VE",
+        "areaName": "委内瑞拉",
+        "region": ""
+      },
+      {
+        "areaCode": "VN",
+        "areaName": "越南",
+        "region": ""
+      },
+      {
+        "areaCode": "VU",
+        "areaName": "瓦努阿图",
+        "region": ""
+      },
+      {
+        "areaCode": "WS",
+        "areaName": "萨摩亚",
+        "region": ""
+      },
+      {
+        "areaCode": "YE",
+        "areaName": "也门",
+        "region": ""
+      },
+      {
+        "areaCode": "ZA",
+        "areaName": "南非",
+        "region": ""
+      },
+      {
+        "areaCode": "ZM",
+        "areaName": "赞比亚",
+        "region": ""
+      },
+      {
+        "areaCode": "ZW",
+        "areaName": "津巴布韦",
+        "region": ""
+      }
+    ]
+  }
+}

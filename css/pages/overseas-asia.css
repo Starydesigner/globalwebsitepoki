@@ -1,0 +1,265 @@
+/* 海外本土 · 亚洲：宽图 + 左文轻叠图 */
+
+.ol-asia {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.ol-asia-split {
+  position: relative;
+  min-height: 380px;
+}
+
+.ol-asia-split--kr {
+  min-height: 460px;
+}
+
+.ol-asia-split__media {
+  position: relative;
+  z-index: 0;
+  width: 86%;
+  margin: 0 0 0 auto;
+  aspect-ratio: 2.35 / 1;
+  min-height: 320px;
+  max-height: 420px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--mg-Grayblue-20-primaryborder);
+}
+
+.ol-asia-split--kr .ol-asia-split__media {
+  aspect-ratio: 2.2 / 1;
+  min-height: 400px;
+  max-height: 480px;
+}
+
+.ol-asia-split__media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(244, 248, 252, 0.96) 0%,
+    rgba(244, 248, 252, 0.88) 12%,
+    rgba(244, 248, 252, 0.62) 24%,
+    rgba(244, 248, 252, 0.28) 38%,
+    rgba(244, 248, 252, 0.08) 50%,
+    transparent 58%
+  );
+}
+
+.ol-asia-split__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ol-asia-split__copy {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: min(50%, 520px);
+  max-width: 520px;
+  padding: 8px 48px 8px 0;
+  pointer-events: none;
+}
+
+.ol-asia-split__copy > * {
+  pointer-events: auto;
+}
+
+.ol-asia-split__mark {
+  position: relative;
+  flex-shrink: 0;
+  width: 34px;
+  height: 26px;
+  margin-bottom: 18px;
+}
+
+.ol-asia-split__mark::before,
+.ol-asia-split__mark::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  width: 7px;
+  height: 22px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, #08d7fd 0%, #066fe8 100%);
+  transform: skewX(-14deg);
+}
+
+.ol-asia-split__mark::before {
+  left: 2px;
+}
+
+.ol-asia-split__mark::after {
+  left: 16px;
+  opacity: 0.55;
+}
+
+.ol-asia-split__title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 600;
+  color: var(--mg-Grayblue-100);
+  text-shadow: 0 0 24px rgba(244, 248, 252, 0.85);
+}
+
+.ol-asia-split__text {
+  margin: 18px 0 0;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--mg-Grayblue-70);
+  text-shadow: 0 0 20px rgba(244, 248, 252, 0.9);
+}
+
+.ol-asia-split__blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.ol-asia-split__block {
+  padding: 16px 0 0;
+  border-top: 1px solid var(--mg-Grayblue-30);
+}
+
+.ol-asia-split__block:first-of-type {
+  padding-top: 0;
+  border-top: none;
+}
+
+.ol-asia-split__block h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-shadow: 0 0 18px rgba(244, 248, 252, 0.85);
+}
+
+.ol-asia-split__block > p {
+  margin: 12px 0 0;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--color-text-secondary);
+  text-shadow: 0 0 16px rgba(244, 248, 252, 0.88);
+}
+
+.ol-asia-split__meta {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--color-text-secondary);
+}
+
+.ol-asia-split__meta strong {
+  display: inline-block;
+  min-width: 4.5em;
+  margin-right: 6px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.ol-asia-split__meta--foot {
+  margin-top: 4px;
+  padding-top: 14px;
+  border-top: 1px solid var(--mg-Grayblue-30);
+  text-shadow: 0 0 16px rgba(244, 248, 252, 0.88);
+}
+
+.ol-asia-split__list {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ol-asia-split__list li {
+  position: relative;
+  padding-left: 14px;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--color-text-secondary);
+  text-shadow: 0 0 16px rgba(244, 248, 252, 0.88);
+}
+
+.ol-asia-split__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--mg-blue-60);
+}
+
+.ol-asia-split__list li + li {
+  margin-top: 8px;
+}
+
+/* 表格等附属模块：沿用 cb-block 区块标题，间距由 .ol-asia gap 承担 */
+.ol-asia > .cb-block.ol-asia-extra {
+  width: 100%;
+  margin-top: 0;
+}
+
+@media (max-width: 960px) {
+  .ol-asia-split,
+  .ol-asia-split--kr {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 0;
+  }
+
+  .ol-asia-split__media,
+  .ol-asia-split--kr .ol-asia-split__media {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .ol-asia-split__copy {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+  }
+
+  .ol-asia-split__media::before {
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(244, 248, 252, 0.12) 50%,
+      rgba(244, 248, 252, 0.5) 100%
+    );
+  }
+
+  .ol-asia-split__title,
+  .ol-asia-split__text,
+  .ol-asia-split__block h3,
+  .ol-asia-split__block > p,
+  .ol-asia-split__list li {
+    text-shadow: none;
+  }
+
+  .ol-asia-split__title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}

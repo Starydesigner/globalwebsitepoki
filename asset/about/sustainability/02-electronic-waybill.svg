@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="电子面单推广">
+  <g fill="none" stroke="#0670E8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="7" y="4" width="18" height="24" rx="2"/><path d="M12 10h8"/><circle cx="16" cy="19" r="5" class="sustain-icon-fill" fill="#CDE2FA" stroke="none"/><path d="m13.5 19 1.7 1.7 3.3-3.4"/>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+node_modules/
+frontend/node_modules/
+frontend/.vite/
+dist/
+.DS_Store
+*.local
+# 首屏完整 hero 仅本地留档，仓库与 CDN 均不使用
+asset/video/hero.mp4

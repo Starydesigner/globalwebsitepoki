@@ -1,0 +1,8 @@
+@import "../../../css/components/site-header.css";
+@import "../../../css/components/float-tools.css";
+@import "../../../css/components/site-footer.css";
+@import "../../../css/components/page-banner.css";
+@import "../../../css/components/mg-button.css";
+
+/* 覆盖 entry-shell HMR 曾内联的旧 .container（顺丰边距） */
+@import "../../../css/layout-container.css";

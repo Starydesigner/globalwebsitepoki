@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="亮色">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="中通国际 — 全球跨境物流与本土派送服务" />
+    <title>中通国际</title>
+    <link rel="stylesheet" href="/css/tokens.css?v=11" />
+    <link rel="stylesheet" href="/css/components/field-clear.css?v=1" />
+    <link rel="stylesheet" href="/css/layout-container.css?v=11" />
+    <link rel="stylesheet" href="/css/home-products-compact.css?v=9" />
+  </head>
+  <body>
+    <script>
+      try {
+        var navTheme = localStorage.getItem("zto-nav-theme") || "glass";
+        document.documentElement.dataset.navTheme = navTheme === "glass" ? "glass" : "blue";
+      } catch (e) {
+        document.documentElement.dataset.navTheme = "glass";
+      }
+    </script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

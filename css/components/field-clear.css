@@ -1,0 +1,78 @@
+/* 输入框内清空：统一「清空」文字，不用圆形 × / 原生 search 取消钮 */
+
+.field-clear {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #0670e8;
+  font: inherit;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.field-clear:hover {
+  text-decoration: underline;
+}
+
+.field-clear[hidden] {
+  display: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+/* 自动包裹层：清关 / 企业咨询等单行输入 */
+.field-clear-wrap {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: var(--field-input-min-height, 52px);
+  padding-right: 16px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: var(--mg-Grayblue-10-lightborder);
+}
+
+.field-clear-wrap:focus-within {
+  border-color: var(--mg-blue-60);
+  box-shadow: 0 0 0 2px var(--mg-blue-20);
+  background: var(--mg-bg-white);
+}
+
+.field-clear-wrap > .clearance-form__input,
+.field-clear-wrap > .cb-warehouse-form__input,
+.field-clear-wrap > .rate-control--input,
+.field-clear-wrap > textarea.clearance-form__input {
+  flex: 1;
+  min-width: 0;
+  border: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.field-clear-wrap > .clearance-form__input:focus,
+.field-clear-wrap > .clearance-form__input:focus-visible,
+.field-clear-wrap > textarea.clearance-form__input:focus,
+.field-clear-wrap > textarea.clearance-form__input:focus-visible,
+.field-clear-wrap > .cb-warehouse-form__input:focus,
+.field-clear-wrap > .cb-warehouse-form__input:focus-visible,
+.field-clear-wrap > .rate-control--input:focus,
+.field-clear-wrap > .rate-control--input:focus-visible {
+  outline: none;
+}
+
+.field-clear-wrap > textarea.clearance-form__input {
+  min-height: 120px;
+  resize: vertical;
+}

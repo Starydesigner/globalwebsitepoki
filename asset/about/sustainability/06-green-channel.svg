@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="应用绿色通道">
+  <g fill="none" stroke="#0670E8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path class="sustain-icon-fill" fill="#CDE2FA" d="M5 10h17l5 5-5 5H5a1 1 0 0 1-1-1v-8a1 1 0 0 1 1-1Z"/><path d="M13 20v7m0-20v3m-4 5h11"/>
+  </g>
+</svg>

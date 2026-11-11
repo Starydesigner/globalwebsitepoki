@@ -1,0 +1,103 @@
+/* 全站主按钮：面型 filled / 线性 outline */
+
+.mg-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: var(--mg-radius-all, 9999px);
+  font-family: inherit;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: filter 0.2s ease, border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.mg-btn--sm {
+  min-width: 120px;
+  height: 40px;
+  padding: 0 18px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.mg-btn--lg {
+  width: 164px;
+  height: 56px;
+  padding: 0 28px;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.mg-btn--filled {
+  color: #fff;
+  background: linear-gradient(90deg, #00a5e3 0%, #066fe8 100%);
+}
+
+.mg-btn--filled:hover {
+  filter: brightness(1.05);
+}
+
+.mg-btn--outline {
+  color: var(--color-text-primary);
+  background: var(--mg-bg-white);
+  border-color: var(--mg-Grayblue-40-darkborder);
+}
+
+.mg-btn--outline:hover {
+  border-color: var(--mg-blue-60);
+  color: var(--mg-blue-60);
+}
+
+/* 产品卡「查看详情」：蓝边胶囊 + 右箭头 */
+.mg-btn--detail {
+  min-width: 0;
+  height: 36px;
+  padding: 7px 16px 7px 18px;
+  gap: 2px;
+  color: var(--mg-blue-60);
+  background: transparent;
+  border-color: var(--mg-blue-60);
+}
+
+.mg-btn--detail:hover {
+  color: var(--mg-blue-60);
+  border-color: var(--mg-blue-60);
+  background: rgba(6, 112, 232, 0.06);
+}
+
+.mg-btn--detail .mg-btn__icon--trailing {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mg-btn--detail:hover .mg-btn__icon--trailing {
+  transform: translateX(4px);
+}
+
+.mg-btn__icon {
+  flex: none;
+  object-fit: contain;
+}
+
+.mg-btn--sm .mg-btn__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.mg-btn--lg .mg-btn__icon {
+  width: 18px;
+  height: 18px;
+}
+
+.mg-btn--filled .mg-btn__icon:not(.mg-btn__icon--trailing) {
+  filter: brightness(0) invert(1);
+}
+
+.mg-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}

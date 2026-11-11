@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="包装废弃物回收">
+  <g fill="none" stroke="#0670E8" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m7 11 3-5h12l3 5"/><rect x="6" y="11" width="20" height="15" rx="2" class="sustain-icon-fill" fill="#CDE2FA"/><path d="M12 19a4 4 0 0 1 7-2.6m0-2.4v3h-3M20 20a4 4 0 0 1-7 2.6m0 2.4v-3h3"/>
+  </g>
+</svg>

@@ -1,0 +1,160 @@
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.55s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+::view-transition-group(cross-card) {
+  animation-duration: 0.82s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: clip;
+}
+
+::view-transition-group(cross-card-visual) {
+  animation-duration: 0.88s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: clip;
+}
+
+::view-transition-old(cross-card) {
+  animation: vt-cross-shell-out 0.82s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+::view-transition-new(cross-card) {
+  animation: vt-cross-shell-in 0.82s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+::view-transition-old(cross-card-visual) {
+  animation: vt-cross-visual-out 0.72s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+::view-transition-new(cross-card-visual) {
+  animation: vt-cross-visual-in 0.88s cubic-bezier(0.16, 1, 0.3, 1) 0.04s both;
+}
+
+@keyframes vt-cross-shell-out {
+  to {
+    opacity: 0.96;
+    filter: blur(3px);
+  }
+}
+
+@keyframes vt-cross-shell-in {
+  from {
+    opacity: 0.88;
+    filter: blur(6px);
+  }
+}
+
+@keyframes vt-cross-visual-out {
+  to {
+    opacity: 0;
+    transform: scale(1.06);
+    filter: blur(4px);
+  }
+}
+
+@keyframes vt-cross-visual-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+    filter: blur(8px);
+  }
+}
+
+.shared-transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  pointer-events: none;
+}
+
+.shared-transition-shell {
+  position: fixed;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f4f8fd 0%, #e7f0fc 100%);
+  box-shadow: 0 0 32px rgba(104, 161, 228, 0.18);
+  transform-origin: center center;
+  will-change: transform, width, height, border-radius, filter, opacity;
+  transition:
+    left 0.82s cubic-bezier(0.16, 1, 0.3, 1),
+    top 0.82s cubic-bezier(0.16, 1, 0.3, 1),
+    width 0.82s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.82s cubic-bezier(0.16, 1, 0.3, 1),
+    border-radius 0.82s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.82s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.45s ease;
+}
+
+.shared-transition-shell__content {
+  position: absolute;
+  inset: 0;
+  padding: clamp(24px, 2.19vw, 42px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.shared-transition-shell__title {
+  margin: 0;
+  font-size: clamp(22px, 1.88vw, 36px);
+  line-height: 1.39;
+  font-weight: 500;
+  color: #01162e;
+  transition: opacity 0.35s ease, transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shared-transition-shell__visual {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: min(82%, 420px);
+  pointer-events: none;
+  transition: opacity 0.45s ease, transform 0.82s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.shared-transition-shell__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.shared-transition-shell.is-morphing .shared-transition-shell__title {
+  opacity: 0;
+  transform: translate3d(0, -8px, 0);
+}
+
+.shared-transition-shell.is-morphing .shared-transition-shell__visual {
+  opacity: 0;
+  transform: scale(1.08) translate3d(0, 12px, 0);
+}
+
+.shared-transition-shell.is-morphing {
+  filter: brightness(0.92);
+}
+
+.shared-transition-shell.is-banner {
+  background: #01162e;
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+
+  .shared-transition-overlay {
+    display: none;
+  }
+}

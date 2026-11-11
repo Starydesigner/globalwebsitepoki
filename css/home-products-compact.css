@@ -1,0 +1,109 @@
+/**
+ * 首页国际物流产品：1366 与 1920 同一套 lane 排版（2/3 列 + 原版卡内结构），仅防溢出
+ */
+
+.section-products .container {
+  container-type: inline-size;
+  container-name: home-products;
+  overflow-x: clip;
+}
+
+/* 小屏（如 1366）：只压矮双卡，区块 min-height / 标题区间距不动 */
+@media (max-width: 1599px) {
+  .section-products {
+    --product-card-h: 408px;
+    --product-card-visual-h: 228px;
+    --product-card-side-visual-h: 200px;
+  }
+
+  .page-home .section-products .product-card,
+  .section-products .product-card {
+    height: var(--product-card-h) !important;
+    min-height: var(--product-card-h) !important;
+  }
+
+  .section-products .product-card__visual {
+    height: var(--product-card-visual-h) !important;
+  }
+
+  .section-products .product-grid.is-cross-open .product-card--overseas,
+  .section-products .product-grid.is-cross-open .product-card--featured,
+  .section-products .product-grid.is-overseas-open .product-card--cross,
+  .section-products .product-grid.is-overseas-open .product-card--featured,
+  .section-products .product-grid.is-featured-open .product-card--cross,
+  .section-products .product-grid.is-featured-open .product-card--overseas {
+    height: var(--product-card-h) !important;
+    min-height: var(--product-card-h) !important;
+  }
+
+  .section-products .product-grid.is-cross-open .product-side .product-card__visual,
+  .section-products .product-grid.is-overseas-open .product-card--cross .product-card__visual,
+  .section-products .product-grid.is-overseas-open .product-card--featured .product-card__visual,
+  .section-products .product-grid.is-cross-open .product-card--overseas .product-card__visual,
+  .section-products .product-grid.is-cross-open .product-card--featured .product-card__visual,
+  .section-products .product-grid.is-featured-open .product-card--cross .product-card__visual,
+  .section-products .product-grid.is-featured-open .product-card--overseas .product-card__visual {
+    height: var(--product-card-side-visual-h) !important;
+  }
+
+  .section-products .product-card--cross .cross-panel__sheet,
+  .section-products .product-card--overseas .cross-panel__sheet,
+  .section-products .product-card--featured .cross-panel__sheet {
+    height: calc(var(--product-card-h) - var(--head-band)) !important;
+    min-height: calc(var(--product-card-h) - var(--head-band)) !important;
+  }
+}
+
+@container home-products (max-width: 1240px) {
+  .product-grid {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  /* 与 home.css 大屏一致：进口/出口两列，海外三列 */
+  .product-card--cross .cross-panel__lanes {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--panel-gap, 12px) !important;
+  }
+
+  .product-card--overseas .cross-panel__lanes {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: var(--panel-gap, 12px) !important;
+  }
+
+  .product-card--featured .cross-panel__lanes {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--panel-gap, 12px) !important;
+  }
+
+  .product-grid.is-cross-open .product-card--cross,
+  .product-grid.is-overseas-open .product-card--overseas,
+  .product-grid.is-featured-open .product-card--featured {
+    overflow: hidden !important;
+  }
+
+  .product-grid.is-cross-open .product-card--overseas,
+  .product-grid.is-cross-open .product-card--featured,
+  .product-grid.is-overseas-open .product-card--cross,
+  .product-grid.is-overseas-open .product-card--featured,
+  .product-grid.is-featured-open .product-card--cross,
+  .product-grid.is-featured-open .product-card--overseas {
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .product-grid.is-overseas-open .product-side .product-card__visual,
+  .product-grid.is-cross-open .product-side .product-card__visual,
+  .product-grid.is-overseas-open .product-card--cross .product-card__visual,
+  .product-grid.is-overseas-open .product-card--featured .product-card__visual,
+  .product-grid.is-cross-open .product-card--overseas .product-card__visual,
+  .product-grid.is-cross-open .product-card--featured .product-card__visual,
+  .product-grid.is-featured-open .product-card--cross .product-card__visual,
+  .product-grid.is-featured-open .product-card--overseas .product-card__visual {
+    right: 0;
+    left: 0;
+  }
+}

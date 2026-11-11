@@ -1,0 +1,120 @@
+/* 企业发件需求登记 */
+
+.content-back-link.enterprise-inquiry__back,
+.enterprise-inquiry__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 8px 16px 8px 14px;
+  border: 1px solid var(--mg-Grayblue-30);
+  border-radius: var(--mg-radius-primary);
+  background: var(--mg-bg-white);
+  box-shadow: var(--mg-shadow-xs);
+  color: var(--mg-blue-60);
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.content-back-link.enterprise-inquiry__back:hover,
+.enterprise-inquiry__back:hover {
+  border-color: rgba(6, 112, 232, 0.35);
+  background: var(--mg-blue-20);
+  color: #0558c7;
+}
+
+.enterprise-inquiry__back-icon {
+  width: 8px;
+  height: 8px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg) translate(1px, -1px);
+}
+
+.enterprise-inquiry-page .enterprise-inquiry__card.ship-card {
+  width: 100%;
+  margin: 0;
+  padding: 48px 56px 56px;
+  border-radius: 28px;
+  box-shadow: 0 8px 32px rgba(104, 161, 228, 0.08);
+}
+
+.enterprise-inquiry__head {
+  margin-bottom: 32px;
+}
+
+.enterprise-inquiry__lead {
+  margin: 0;
+  max-width: 520px;
+  margin-inline: auto;
+  text-align: center;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--color-text-secondary);
+}
+
+.enterprise-inquiry-form {
+  width: min(560px, 100%);
+  margin-inline: auto;
+}
+
+.enterprise-inquiry-form__textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.enterprise-inquiry-form__captcha {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 120px;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.enterprise-inquiry-form__captcha-img {
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--mg-Grayblue-30);
+  border-radius: 4px;
+  background: var(--mg-bg-white);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.enterprise-inquiry-form__captcha-img canvas {
+  display: block;
+  width: 100%;
+  height: 44px;
+}
+
+.enterprise-inquiry-form__submit {
+  width: min(100%, 360px);
+  height: 52px;
+  border-radius: var(--mg-radius-all);
+}
+
+.enterprise-inquiry-form .clearance-form__tip.is-success {
+  color: var(--mg-green-60);
+}
+
+@media (max-width: 640px) {
+  .enterprise-inquiry-page .enterprise-inquiry__card.ship-card {
+    padding: 32px 20px 40px;
+    border-radius: 20px;
+  }
+
+  .enterprise-inquiry-form__captcha {
+    grid-template-columns: 1fr;
+  }
+
+  .enterprise-inquiry-form__captcha-img {
+    justify-self: start;
+    width: 120px;
+  }
+}

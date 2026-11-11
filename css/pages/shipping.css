@@ -1,0 +1,61 @@
+.ship-hub {
+  background: #f3f6f9;
+}
+
+.ship-hub .site-header--default:not(.has-mega-open) .site-header__bar {
+  background: rgba(243, 246, 249, 0.86);
+  box-shadow: 0 8px 24px rgba(104, 161, 228, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.ship-hub .site-header--default:not(.has-mega-open) .site-header__nav-link,
+.ship-hub .site-header--default:not(.has-mega-open) .site-header__locale,
+.ship-hub .site-header--default:not(.has-mega-open) .site-header__auth,
+html[data-nav-theme="glass"] .ship-hub .site-header:not(.has-mega-open) .site-header__nav-link,
+html[data-nav-theme="glass"] .ship-hub .site-header:not(.has-mega-open) .site-header__locale,
+html[data-nav-theme="glass"] .ship-hub .site-header:not(.has-mega-open) .site-header__auth {
+  color: #01162e;
+}
+
+.ship-hub .site-header--default:not(.has-mega-open) .site-header__nav-link.is-active {
+  color: #01162e;
+  font-weight: 500;
+}
+
+.ship-hub .site-header--default .site-header__nav-item.is-active .site-header__indicator,
+html[data-nav-theme="glass"] .ship-hub .site-header:not(.has-mega-open) .site-header__nav-item.is-active .site-header__indicator,
+html[data-nav-theme="glass"] .ship-hub .site-header:not(.has-mega-open) .site-header__nav-item:hover .site-header__indicator {
+  bottom: 11px;
+  width: 12px;
+  height: 4px;
+  border-radius: 999px;
+  background: #0670e8;
+}
+
+.ship-hub .site-header__locale img {
+  filter: brightness(0);
+}
+
+.ship-hub .site-header__locale img:first-child {
+  display: none;
+}
+
+.ship-hub .ship-main {
+  padding: 160px 0 139px;
+}
+
+.ship-hub .ship-board {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.ship-hub .ship-main--rates {
+  padding-bottom: 39px;
+}
+
+@media (max-width: 1488px) {
+  .ship-board {
+    flex-direction: column;
+  }
+}

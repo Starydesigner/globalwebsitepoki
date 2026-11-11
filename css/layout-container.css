@@ -1,0 +1,50 @@
+/**
+ * 全站内容区宽度（顺丰：1440 视口 → 内容 1200、左右 120）
+ * index.html 静态引入；覆盖各页懒加载 CSS / HMR 残留的旧 width 公式。
+ */
+
+:root {
+  --layout-content-max: min(
+    1440px,
+    max(1200px, calc(1200px + (100vw - 1440px) * 0.5))
+  );
+  --layout-inline-margin: max(20px, calc((100vw - var(--layout-content-max)) / 2));
+  --layout-shell-width: min(
+    1440px,
+    max(1200px, calc(1200px + (100vw - 1440px) * 0.5))
+  );
+}
+
+@media (min-width: 1240px) {
+  .page-shell .container,
+  .container,
+  .site-header .container,
+  .site-header__inner.container,
+  .mega__inner,
+  .ship-layout,
+  .subpage,
+  .cb-wrap,
+  .cb-tabs__list {
+    box-sizing: border-box;
+    width: var(--layout-shell-width) !important;
+    max-width: var(--layout-shell-width) !important;
+    margin-inline: auto !important;
+  }
+}
+
+@media (max-width: 1239px) {
+  .page-shell .container,
+  .container,
+  .site-header .container,
+  .site-header__inner.container,
+  .mega__inner,
+  .ship-layout,
+  .subpage,
+  .cb-wrap,
+  .cb-tabs__list {
+    box-sizing: border-box;
+    width: calc(100% - 40px) !important;
+    max-width: none !important;
+    margin-inline: auto !important;
+  }
+}

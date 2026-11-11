@@ -1,0 +1,142 @@
+/* 内页顶部 Banner：通栏背景、左对齐文案、黑色透明蒙层。首页不使用。 */
+
+.page-banner {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 400px;
+  margin-top: var(--header-height-hero);
+  padding: 48px 0 108px;
+  overflow: hidden;
+  color: var(--color-text-inverse);
+  text-align: left;
+}
+
+.page-banner::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 72px;
+  pointer-events: none;
+  /* 顶边微笑：两侧高、中间低（与 MasterGo 原稿一致）；勿铺整片底色以免曲线消失 */
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 72' preserveAspectRatio='none'><path d='M0 0Q720 72 1440 0L1440 72L0 72Z' fill='%23f4f8fc'/></svg>")
+    center / 100% 100% no-repeat;
+}
+
+.page-banner img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 寄递头图略缩小裁切，避免人物显得过于贴脸 */
+.page-banner[data-ship-banner] img[data-banner-image] {
+  width: 112%;
+  height: 112%;
+  inset: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: 58% 42%;
+}
+
+.page-banner__veil {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.page-banner__copy {
+  position: relative;
+  z-index: 3;
+  text-align: left;
+}
+
+.page-banner h1 {
+  margin: 0;
+  max-width: 16em;
+  font-family: "Alimama ShuHeiTi", var(--font-family-display);
+  font-size: clamp(32px, 3.4vw, 48px);
+  line-height: 1.35;
+  font-weight: 700;
+  text-align: left;
+}
+
+.page-banner h1 .page-banner__title-line {
+  color: inherit;
+}
+
+.page-banner h1 .banner-title__accent {
+  color: var(--mg-secondarygreen-60);
+}
+
+.page-banner__sub {
+  margin: 12px 0 0;
+  max-width: 36em;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.page-banner[data-ship-banner] .page-banner__sub {
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.page-banner[data-ship-banner] h1 {
+  letter-spacing: 0.08em;
+}
+
+.page-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.page-banner__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 112px;
+  height: 40px;
+  padding: 0 18px;
+  border-radius: var(--mg-radius-primary);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.page-banner__btn[hidden] {
+  display: none;
+}
+
+.page-banner__btn--primary {
+  background: linear-gradient(90deg, #0b62fb 0%, #08d7fd 100%);
+  color: var(--color-text-inverse);
+}
+
+.page-banner__btn--primary:hover {
+  filter: brightness(1.05);
+}
+
+.page-banner__btn--ghost {
+  color: var(--color-text-inverse);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+}
+
+.page-banner__btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+}

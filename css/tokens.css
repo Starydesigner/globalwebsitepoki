@@ -1,0 +1,163 @@
+/**
+ * 中通国际官网 — 设计 Token（亮色主题）
+ * 使用方式：在 html 或 body 上添加 class="亮色"，或依赖 :root 默认变量。
+ */
+
+@font-face {
+  font-family: "DingTalk JinBuTi";
+  src: url("../asset/fonts/DingTalkJinBuTi.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alibaba PuHuiTi";
+  src:
+    local("Alibaba PuHuiTi 3.0"),
+    local("Alibaba PuHuiTi"),
+    local("AlibabaPuHuiTi-3-115-Black");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alimama ShuHeiTi";
+  src:
+    url("../asset/fonts/AlimamaShuHeiTi-Bold.woff2") format("woff2"),
+    local("Alimama ShuHeiTi"),
+    local("AlimamaShuHeiTi-Bold"),
+    local("阿里妈妈数黑体 Bold");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root,
+.亮色 {
+  /* 渐变与阴影 */
+  --mg-Blue-gradient: linear-gradient(90deg, #00a5e3 0%, #066fe8 100%);
+  --mg-shadow-xs: 0px 4px 16px 0px #68a1e414;
+  --mg-shadow-sm: 0px 8px 24px 0px #68a1e414;
+  --mg-shadow-md: 0px 16px 32px 0px #68a1e41f;
+  --mg-shadow-lg: 0px 24px 48px 0px #68a1e429;
+
+  /* 字体层级（设计稿 shorthand，供文档与工具读取） */
+  --mg-正文-大-加粗: 中黑体 400 18px/25px "苹方-简";
+  --mg-正文-大: 常规体 400 18px/25px "苹方-简";
+  --mg-次要文案-加粗: 中黑体 400 14px/0.24 "苹方-简";
+  --mg-正文: regular 400 16px/0.22 "PingFangSC-Regular";
+  --mg-次要文案: 常规体 400 14px/0.24 "苹方-简";
+  --mg-主标题: 中黑体 400 24px/34px "苹方-简";
+  --mg-正文-加粗: 中黑体 400 16px/22px "苹方-简";
+  --mg-辅助文本-极小: regular 400 12px/0.12 "苹方-简";
+  --mg-小标题: 中黑体 400 20px/28px "苹方-简";
+
+  /* 圆角 */
+  --mg-radius-sm: 4px;
+  --mg-radius-xsm: 2px;
+  --mg-radius-primary: 8px;
+  --mg-radius-all: 9999px;
+  --mg-radius-lg: 16px;
+
+  /* 色板 */
+  --mg-bg-white: #ffffff;
+  --mg-blue-60: #0670e8;
+  --mg-teal-10: #dcf5ff;
+  --mg-bg-disabled: #f1f1f1;
+  --mg-blue-20: #bedbff;
+  --mg-Grayblue-30: #dce6ee;
+  --mg-red-10: #fcdad1;
+  --mg-secondarygreen-40: #c5e691;
+  --mg-green-60: #19be6b;
+  --mg-orange-10: #ffebcc;
+  --mg-orange-60: #ff9900;
+  --mg-blue-80: #0641a6;
+  --mg-teal-80: #007ba9;
+  --mg-teal-40: #76daff;
+  --mg-Grayblue-60: #808a96;
+  --mg-red-40: #f48d73;
+  --mg-Grayblue-70: #4d5c6d;
+  --mg-secondarygreen-80: #618b20;
+  --mg-Grayblue-100: #000c1a;
+  --mg-green-80: #0d6438;
+  --mg-secondarygreen-10: #f1f9e4;
+  --mg-Grayblue-20-primaryborder: #e7eef4;
+  --mg-bg-secondary: #f6f9ff;
+  --mg-orange-80: #995c00;
+  --mg-red-80: #90260b;
+  --mg-Grayblue-10-lightborder: #f4f8fc;
+  --mg-orange-40: #ffc266;
+  --mg-blue-40: #69acff;
+  --mg-teal-60: #10beff;
+  --mg-Grayblue-05-浅色文字: #fdfeff;
+  --mg-Grayblue-40-darkborder: #cfdae4;
+  --mg-green-40: #81eeb8;
+  --mg-blue-10: #e8f2ff;
+  --mg-red-60: #ed4014;
+  --mg-Grayblue-90: #01162e;
+  --mg-Grayblue-50: #b3b9c0;
+  --mg-green-10: #dcfaeb;
+  --mg-secondarygreen-60: #99d33e;
+
+  /* 语义别名（页面开发推荐引用） */
+  --color-text-primary: var(--mg-Grayblue-90);
+  --color-text-secondary: var(--mg-Grayblue-70);
+  --color-text-muted: var(--mg-Grayblue-60);
+  --color-text-inverse: var(--mg-bg-white);
+  --color-border: var(--mg-Grayblue-30);
+  --color-border-light: var(--mg-Grayblue-20-primaryborder);
+  --color-link: var(--mg-blue-60);
+  --color-nav-bg: #003074;
+  --color-nav-active: #01b1f3;
+  --gradient-hero-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+  --gradient-page-soft: linear-gradient(180deg, #fefeff 0%, #e9f4ff 100%);
+  --gradient-page-news: linear-gradient(180deg, #fefefe 0%, #e9efff 100%);
+  --gradient-product-card: linear-gradient(180deg, #f4f5f7 0%, #e7ebf7 100%);
+
+  --font-family-base: "PingFang SC", "PingFangSC-Regular", "苹方-简", -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  --font-family-display: "DingTalk JinBuTi", var(--font-family-base);
+  --font-family-lane-title: "Alimama ShuHeiTi", var(--font-family-display);
+
+  --layout-canvas: 1920px;
+  /* 顺丰 1440 视口：内容约 1200px、左右约 120px；1920 画板内容 1440、边距 240 */
+  --layout-max: 1440px;
+  --layout-max-narrow: 1200px;
+  --layout-content-max: min(
+    var(--layout-max),
+    max(
+      var(--layout-max-narrow),
+      calc(var(--layout-max-narrow) + (100vw - 1440px) * 0.5)
+    )
+  );
+  --layout-max-effective: var(--layout-content-max);
+  --layout-gutter: 240px;
+  --layout-gutter-min: 24px;
+  --layout-inline-margin: max(
+    var(--layout-gutter-min),
+    calc((100vw - var(--layout-content-max)) / 2)
+  );
+  --layout-gutter-fluid: min(var(--layout-gutter), var(--layout-inline-margin));
+  --header-height-hero: 64px;
+  --header-height-default: 65px;
+
+  /* 表单输入框（运单查询、运费时效等） */
+  --field-input-font-size: 18px;
+  --field-input-line-height: 26px;
+  --field-input-padding-y: 12px;
+  --field-input-padding-x: 16px;
+  --field-input-padding: var(--field-input-padding-y) var(--field-input-padding-x);
+  --field-input-min-height: calc(
+    var(--field-input-padding-y) * 2 + var(--field-input-line-height)
+  );
+}
+
+/* 小屏：仅抬高最小边距，不覆盖桌面居中公式 */
+@media (max-width: 959px) {
+  :root,
+  .亮色 {
+    --layout-gutter-min: 20px;
+  }
+}

@@ -1,0 +1,770 @@
+/* 运费时效卡片 — MasterGo 容器 17238 (26:02809) */
+
+.rate-card {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: 1082px;
+  padding: 24px;
+  overflow: visible;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.rate-card > .ship-panel-title {
+  margin: 0;
+  text-align: center;
+}
+
+/* 卡片内板块标题：24/34、600 字重、居中装饰条（运单查询 / 运费时效 / 清关共用） */
+.ship-panel-title__text {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 12px;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.ship-panel-title__text::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 54px;
+  height: 4px;
+  transform: translateX(-50%);
+  background: url("../../asset/icons/underline.svg") center / 54px 4px no-repeat;
+}
+
+.rate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.rate-pair {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 56px;
+}
+
+.rate-field {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  position: relative;
+  overflow: visible;
+}
+
+.rate-picker {
+  position: relative;
+  width: 100%;
+}
+
+.rate-picker__trigger {
+  width: 100%;
+}
+
+.rate-picker__trigger span[data-rate-picker-label] {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rate-picker__trigger.is-placeholder span[data-rate-picker-label] {
+  color: #808a96;
+  font-weight: 400;
+}
+
+.rate-picker__trigger:not(.is-placeholder) span[data-rate-picker-label] {
+  color: #01162e;
+  font-weight: 500;
+}
+
+.rate-picker__panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: min(520px, 92vw);
+  max-height: 420px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(1, 22, 46, 0.12);
+  overflow: hidden;
+}
+
+.rate-picker__panel[hidden] {
+  display: none;
+}
+
+.rate-picker__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 24px 32px;
+  padding-bottom: 0;
+  border-bottom: 1px solid var(--mg-Grayblue-30, #dce6ee);
+}
+
+.rate-picker__tab {
+  position: relative;
+  flex: none;
+  min-height: 44px;
+  padding: 0 2px 10px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-text-secondary, #4d5c6d);
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.rate-picker__tab.is-active {
+  color: var(--color-text-primary, #01162e);
+  font-weight: 600;
+}
+
+.rate-picker__tab.is-active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 56px;
+  height: 4px;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  background: var(--mg-blue-60, #0670e8);
+  pointer-events: none;
+}
+
+.rate-picker__tab:focus-visible {
+  outline: 2px solid var(--mg-blue-60);
+  outline-offset: 2px;
+}
+
+.rate-picker__search {
+  box-sizing: border-box;
+  flex: none;
+  width: 100%;
+  min-height: var(--field-input-min-height);
+  margin: 0;
+  padding: var(--field-input-padding);
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: #f7f9fc;
+  color: #01162e;
+  font-size: var(--field-input-font-size);
+  line-height: var(--field-input-line-height);
+  font-family: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.rate-picker__search[hidden] {
+  display: none;
+}
+
+.rate-picker__subhead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rate-picker__subhead[hidden] {
+  display: none;
+}
+
+.rate-picker__back {
+  flex: none;
+  padding: 4px 10px;
+  border: 0;
+  border-radius: var(--mg-radius-all, 9999px);
+  background: #f7f9fc;
+  color: #0670e8;
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.rate-picker__subhead span {
+  color: #4d5c6d;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.rate-picker__search::placeholder {
+  color: #808a96;
+}
+
+.rate-picker__grid {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  min-height: 0;
+  padding-bottom: 12px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.rate-picker__item {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--mg-Grayblue-10-lightborder, #f7f9fc);
+  color: #01162e;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  font-family: inherit;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-pack: center;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.rate-picker__item:hover {
+  background: var(--mg-blue-10, #e8f2ff);
+  color: #0670e8;
+}
+
+.rate-picker__item.is-active {
+  background: var(--mg-blue-10, #e8f2ff);
+  color: #0670e8;
+  font-weight: 500;
+}
+
+.rate-picker__empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 12px 0;
+  color: #808a96;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.rate-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #01162e;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.rate-label em {
+  color: #ff3e20;
+  font-style: normal;
+}
+
+.rate-label img,
+.rate-meta img {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.rate-hint {
+  margin-left: 4px;
+  color: #808a96;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.rate-field__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+}
+
+.rate-field__head .rate-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.rate-volume-bill {
+  flex: none;
+  color: #808a96;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.rate-volume-bill em {
+  margin-left: 4px;
+  color: #01162e;
+  font-size: inherit;
+  font-style: normal;
+  font-weight: 600;
+  line-height: inherit;
+}
+
+.rate-dims {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+}
+
+.rate-dim {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  min-height: var(--field-input-min-height);
+  padding: 0 12px;
+  border-radius: 4px;
+  background: #f7f9fc;
+  cursor: text;
+}
+
+.rate-dim__label {
+  flex: none;
+  color: #808a96;
+  font-size: var(--field-input-font-size);
+  line-height: var(--field-input-line-height);
+}
+
+.rate-dim__input {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: var(--field-input-padding);
+  padding-left: 0;
+  padding-right: 0;
+  border: 0;
+  background: transparent;
+  color: #01162e;
+  font-size: var(--field-input-font-size);
+  font-weight: 400;
+  line-height: var(--field-input-line-height);
+  font-family: inherit;
+  text-align: left;
+}
+
+.rate-dim__input::placeholder {
+  color: #808a96;
+}
+
+.rate-dim__input:focus {
+  outline: none;
+}
+
+.rate-dim:focus-within {
+  box-shadow: 0 0 0 2px var(--mg-blue-20);
+  background: var(--mg-bg-white);
+}
+
+.rate-dim__unit {
+  flex: none;
+  color: #4d5c6d;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.rate-field > .rate-control {
+  width: 100%;
+}
+
+/* 运费输入挂载 field-clear-wrap 后与未包裹的 rate-control 视觉一致 */
+.rate-field > .field-clear-wrap {
+  border: 0;
+  background: #f7f9fc;
+}
+
+.rate-field > .field-clear-wrap:focus-within {
+  border-color: transparent;
+  box-shadow: 0 0 0 2px var(--mg-blue-20);
+  background: var(--mg-bg-white);
+}
+
+.rate-control {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--field-input-min-height);
+  padding: var(--field-input-padding);
+  border: 0;
+  border-radius: 4px;
+  background: #f7f9fc;
+  color: #01162e;
+  font-size: var(--field-input-font-size);
+  font-weight: 500;
+  line-height: var(--field-input-line-height);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.rate-control--input {
+  width: 100%;
+  font-weight: 400;
+  cursor: text;
+}
+
+.rate-control--input::placeholder {
+  color: #808a96;
+}
+
+.rate-control--input:focus,
+.rate-control--input:focus-visible,
+.rate-picker__search:focus,
+.rate-picker__search:focus-visible {
+  outline: none;
+  border-color: var(--mg-blue-60);
+  box-shadow: 0 0 0 2px var(--mg-blue-20);
+  background: var(--mg-bg-white);
+}
+
+.rate-control--input:-webkit-autofill,
+.rate-control--input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-text-primary);
+  caret-color: var(--color-text-primary);
+  box-shadow: 0 0 0 1000px var(--mg-bg-white) inset;
+  transition: background-color 99999s ease-out 0s;
+}
+
+.rate-control img {
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+
+.rate-pair__arrow {
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  width: 48px;
+  height: 11px;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.rate-radios {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  min-height: var(--field-input-min-height);
+  padding: var(--field-input-padding);
+  border-radius: 4px;
+  background: #f7f9fc;
+}
+
+.rate-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #01162e;
+  font-size: var(--field-input-font-size);
+  line-height: var(--field-input-line-height);
+  cursor: pointer;
+}
+
+.rate-radio input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 1.5px solid #b3b9c0;
+  border-radius: 50%;
+  background: #fff;
+  appearance: none;
+}
+
+.rate-radio input:checked {
+  border: 5px solid #0670e8;
+}
+
+.rate-form .mg-btn,
+.rate-card .mg-btn {
+  align-self: center;
+}
+
+.rate-go.mg-btn--outline {
+  color: #0670e8;
+  background: #e8f2ff;
+  border-color: transparent;
+}
+
+.rate-go.mg-btn--outline:hover {
+  filter: brightness(0.98);
+  border-color: transparent;
+  color: #0670e8;
+}
+
+.rate-field__error {
+  margin: -4px 0 0;
+  color: #ff3e20;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.rate-field__error[hidden] {
+  display: none;
+}
+
+.rate-control--input.is-invalid,
+.rate-picker__trigger.is-invalid {
+  box-shadow: 0 0 0 1px #ff3e20;
+  background: #fff;
+}
+
+/* 总重量/邮编被 field-clear-wrap 包裹时，错误描边画在 wrap 上 */
+.rate-field > .field-clear-wrap:has(.rate-control--input.is-invalid) {
+  border-color: transparent;
+  box-shadow: 0 0 0 1px #ff3e20;
+  background: #fff;
+}
+
+.rate-control--input.is-invalid:focus,
+.rate-control--input.is-invalid:focus-visible,
+.rate-picker__trigger.is-invalid:focus,
+.rate-picker__trigger.is-invalid:focus-visible {
+  box-shadow: 0 0 0 1px #ff3e20, 0 0 0 3px rgb(255 62 32 / 12%);
+}
+
+.rate-field > .field-clear-wrap:has(.rate-control--input.is-invalid):focus-within {
+  border-color: transparent;
+  box-shadow: 0 0 0 1px #ff3e20, 0 0 0 3px rgb(255 62 32 / 12%);
+}
+
+.rate-radios.is-invalid {
+  box-shadow: 0 0 0 1px #ff3e20;
+  background: #fff;
+}
+
+.rate-result[hidden] {
+  display: none;
+}
+
+.rate-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 16px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #eef5ff 0%, rgba(247, 249, 252, 0.2) 100%);
+}
+
+.rate-result__head,
+.rate-route,
+.rate-product {
+  align-self: stretch;
+}
+
+.rate-result__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.rate-result__head strong {
+  color: #01162e;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.rate-result__head span {
+  color: #4d5c6d;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.rate-route {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.rate-place {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #01162e;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 1px;
+}
+
+.rate-pin {
+  position: relative;
+  width: 20.73px;
+  height: 24px;
+  flex: none;
+}
+
+.rate-pin img {
+  width: 20.73px;
+  height: 24px;
+  max-width: none;
+}
+
+.rate-pin span {
+  position: absolute;
+  top: 5.45px;
+  left: 3.82px;
+  color: #fff;
+  font-size: 13.09px;
+  font-weight: 500;
+  line-height: 13.09px;
+  text-shadow: 0 1.09px 2.18px rgba(0, 86, 191, 0.2);
+}
+
+.rate-route__line {
+  width: 150.61px;
+  height: 10.6px;
+  flex: none;
+  max-width: none;
+}
+
+.rate-product {
+  overflow: hidden;
+  border: 1px solid #e7eef4;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.rate-product__name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 12px;
+  border-bottom: 1px solid #eff7ff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.rate-product__name > span {
+  background-image: linear-gradient(288deg, #333 0%, #004895 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.rate-badge {
+  padding: 4px 6px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #ff6a00 0%, #ff9518 100%);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  font-style: normal;
+  -webkit-text-fill-color: #fff;
+}
+
+.rate-product__row {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 32px 72px;
+  padding: 16px 12px;
+}
+
+.rate-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rate-meta span,
+.rate-meta__label {
+  color: #4d5c6d;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.rate-meta strong {
+  color: #01162e;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.rate-meta strong.is-emphasis {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.rate-meta__label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rate-meta .rate-price {
+  color: #ff7d03;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+@media (max-width: 960px) {
+  .rate-pair {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .rate-pair__arrow {
+    display: none;
+  }
+
+  .rate-picker__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .rate-picker__panel {
+    width: 100%;
+  }
+}
